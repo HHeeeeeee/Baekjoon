@@ -34,6 +34,7 @@ public class Q9935 {
 			bw.write(newStr);
 			bw.flush();
 			bw.close();
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
