@@ -2,6 +2,31 @@ import java.util.Scanner;
 public class Q2839 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int result = 0;
+		
+		while (true) {
+			if ((n % 5) == 0) {
+				result += n / 5;
+				break;
+			}
+			if (n < 3) {
+				result = -1;
+			}
+			n -= 3;
+			result ++;
+		}
+		
+		System.out.println(result);
+	}
+}
+
+
+
+/*import java.util.Scanner;
+public class Q2839 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		
 		int n = in.nextInt();	//11
 		
@@ -54,39 +79,6 @@ public class Q2839 {
 		}
 		
 		System.out.println(result);
-		
-		
-		
-		
-		
-		
-		
-		
-		//int three;
-		
-/*		if(n%5==0){
-			System.out.println(n/5);
-		}else if(n%3==0){
-			System.out.println(n/3);
-		}else if(n%5 == )*/
-		
-		
-		
-		//if(n%5==0 || n%5==3i)
-		
-		
-		
-		
-		/*if(n%5==0 || n%5==3 || n%3==0){
-			if(n%5==0){
-				System.out.println(n/5);
-			}else if(n%5==3){
-				System.out.println((n/5) + ((n%5)/3));
-			}else{
-				System.out.println(n/3);
-			}
-		}else{
-			System.out.println(-1);
-		}*/
 	}
 }
+*/
