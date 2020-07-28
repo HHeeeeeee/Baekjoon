@@ -8,6 +8,25 @@ public class Q1924 {
 		int day = in.nextInt();
 		int totalDay = 0;
 		
+		for (int i = 0; i < month-1; i++){
+			totalDay += endOfMonth[i];
+		}
+		totalDay += day;
+		
+		System.out.println(dayOfWeek[totalDay%7]);
+	}
+}
+
+/*import java.util.Scanner;
+public class Q1924 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int endOfMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		String dayOfWeek[] = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+		int month = in.nextInt();
+		int day = in.nextInt();
+		int totalDay = 0;
+		
 		if (month > 1) {
 			for (int i = 0; i < month-1; i++){
 				totalDay += endOfMonth[i];
@@ -19,7 +38,7 @@ public class Q1924 {
 		
 		System.out.println(dayOfWeek[totalDay%7]);
 	}
-}
+}*/
 
 /*import java.util.Scanner;
 public class Q1924 {
