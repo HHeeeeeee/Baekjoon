@@ -2,6 +2,29 @@ import java.util.Scanner;
 public class Q1924 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		int endOfMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		String dayOfWeek[] = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+		int month = in.nextInt();
+		int day = in.nextInt();
+		int totalDay = 0;
+		
+		if (month > 1) {
+			for (int i = 0; i < month-1; i++){
+				totalDay += endOfMonth[i];
+			}
+			totalDay += day;
+		} else {	// 1월달인 경우, day로만 계산
+			totalDay = day;
+		}
+		
+		System.out.println(dayOfWeek[totalDay%7]);
+	}
+}
+
+/*import java.util.Scanner;
+public class Q1924 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		int in_month = in.nextInt();	// 월 입력받은 값
 		int in_day = in.nextInt();			// 일 입력받은 값
 		String week[] = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};	// 요일
@@ -37,114 +60,6 @@ public class Q1924 {
 			print = week[5];
 		}
 		
-		/*if(day%7==0){
-			print = week[6];
-		}else if(day%7==1){
-			print = week[0];
-		}else if(day%7==2){
-			print = week[1];
-		}else if(day%7==3){
-			print = week[2];
-		}else if(day%7==4){
-			print = week[3];
-		}else if(day%7==5){
-			print = week[4];
-		}else{
-			print = week[5];
-		}	*/
-		
-		
-		//if(month ==1){
-			
-			
-			/*for(int i=1; i<=day; i++){
-				for(int j=0; j<7; j++){
-					print = week[j];
-					System.out.println("i+print : " + i + print);
-				}
-			}*/
-			
-		//}
-		
 		System.out.println(print);
-		
-		
-		
-		
-		
-		
-		
-	/*	for(int i=0; i<7; i++){
-			print = week[i];
-		}
-		System.out.println(print);*/
-		
-		
-		
-		
-	/*	if(month == 1){
-			for(int j=1; j<=day; j++){
-				for(int i=0; i<7; i++){
-					print = week[i];
-				}
-				System.out.println(print);
-			}
-			
-		}
-		*/
-		
-		
-		/* *if(month==1 | month==3 | month==5 | month==7 | month==8 | month==10 | month==12){
-			for(int j=1; j<=31; j++){
-				
-			}
-		}*/
-		
-		/*for(int i=1; i<=12; i++){
-			if(i==1 | i==3 | i==5 | i==7 | i==8 | i==10 | i==12){
-				for(int j=1; j<=31; j++){
-					
-				}
-			}
-		}*/
 	}
-}
-
-
-
-/*오늘은 2007년 1월 1일 월요일이다. 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.
-
-입력
-첫째 줄에 빈 칸을 사이에 두고 x(1≤x≤12)와 y(1≤y≤31)이 주어진다. 참고로 2007년에는 1, 3, 5, 7, 8, 10, 12월은 31일까지, 4, 6, 9, 11월은 30일까지, 2월은 28일까지 있다.
-
-출력
-첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.*/
-
-/*switch(i){
-case 1 :
-case 3 :
-case 5 :
-case 7 :
-case 8 :
-case 10 :
-case 12:
-	for(int j=1; j<=31; j++){
-		
-	}
-	break;
-
-case 4 :
-case 6 :
-case 9 :
-case 11 :
-	for(int j=1; j<=30; j++){
-		
-	}
-	break;
-
-case 2 :
-	for(int j=1; j<=28; j++){
-		
-	}
-	break;
 }*/
