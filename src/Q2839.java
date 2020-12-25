@@ -12,6 +12,7 @@ public class Q2839 {
 			}
 			if (n < 3) {
 				result = -1;
+				break;
 			}
 			n -= 3;
 			result ++;
